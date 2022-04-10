@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oxygen&family=Oxygen+Mono&display=swap');
 
 :root {
-    --black: #26250F;
+    --black: #000000;
     --maroon:#8C1F28;
     --aqua:#18DBFD;
     --skyblue:#A3CFE8;
@@ -20,6 +20,7 @@
     --hotpink:#F227AB;
     --lighpink:#F7C6D0;
     --plum:#4b0d49;
+    --light-skin:#F2EBDF;
     --mono: "Oxygen mono",monospace;
     --sans:Oxygen,sans-sarif;
 }
@@ -33,7 +34,7 @@ html{
 }
 
 body{
-    background-color: var(--black);
+    background-color: var(--darkbllue);
     font-size: var(--font-size);
     font-family: var(--sans);
     margin: 0;
@@ -68,7 +69,7 @@ body{
 
 #intro p:nth-of-type(3) a {
     text-decoration: none;
-    color:var(--hotpink);
+    color:var(--aqua);
 }
 /* nav bar */
 .gradient {
@@ -145,7 +146,8 @@ nav li:last-child a{
 }
 
 nav li:last-child a:hover{
-    background-color: var(--aqua);
+    background-color: var(--light-skin);
+    color: var(--darkbllue);
 }
 
 /*footer styles */
@@ -223,4 +225,86 @@ footer li:nth-of-type(3) svg:hover{
     text-decoration: none;
     color: var(--white);
     font-family: var(--mono);
+}
+
+#contact a:hover{
+    background-color: var(--lighpink);
+    color: var(--darkbllue);
+}
+
+/* styles for poject */
+#projects {
+    color: var(--white);
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 2rem 0;
+}
+
+#projects h2 {
+    font-size: 2rem;
+}
+
+#projects img {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    width: 500px;
+}
+
+article {
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    gap: 1rem;
+    text-align: right;
+}
+
+article div {
+    grid-column: 4/11;
+    grid-row: 1/2;
+    order: 2;
+}
+article h4 {
+    font-family: var(--mono);
+    font-size: 1rem;
+    margin: 0;
+}
+
+article h3 {
+    color: var(--aqua);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+article p {
+    line-height: 1.6;
+    background-color: var(--black);
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+article p a {
+    text-decoration: none;
+    color: var(--hotpink);
+}
+
+article ul {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: row wrap;
+    justify-content: left;
+    padding: 0;
+    justify-content: right;
+    margin: 0;
+}
+
+article ul li {
+    list-style-type: none;
+}
+
+article img {
+    width: 800px;
+    padding: 1rem;
+    border: 2px solid var(--white);
+    background-color: var(--white);
+    border-radius: 20px;
 }
