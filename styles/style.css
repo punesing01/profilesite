@@ -45,7 +45,7 @@ body{
     color:var(--white);
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 3rem;
+    padding: 4rem 0;
 }
 
 #intro span {
@@ -59,12 +59,14 @@ body{
     font-size: 3rem;
     margin: 0;
     margin-bottom: 20px;
+    padding: 0 1rem;
 }
 
 #intro p {
     font-size: 1rem;
     margin:0;
     line-height: 2.0;
+    padding: 0 1rem;
 }
 
 #intro p:nth-of-type(3) a {
@@ -81,7 +83,7 @@ nav {
     color: var(--white);
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0 60px 0;
+    padding: 30px 0 60px 0;
     font-family: var(--mono);
 }
 
@@ -94,8 +96,9 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:2rem;
+    gap:1rem;
     padding:0;
+    flex-wrap: wrap;
 }
 
 nav li:first-child {
@@ -103,6 +106,7 @@ nav li:first-child {
     display: flex;
     align-items: center;
     gap: 1rem;
+    justify-content: center;
 }
 
 nav li:first-child h2:hover{
@@ -150,6 +154,28 @@ nav li:last-child a:hover{
     color: var(--darkbllue);
 }
 
+/*.hamburger{
+    display:flex;
+    flex-direction:column;
+    gap:0.2rem;
+  }
+
+.hamburger div{
+    background-color:white;
+    width:50px;
+  }
+  
+  .hamburger div:nth-of-type(1){
+    height:5px;
+  }
+  
+  .hamburger div:nth-of-type(2){
+    height:6px;
+  }
+  .hamburger div:nth-of-type(3){
+   height:7px;
+  }
+*/
 /*footer styles */
 footer {
     max-width: 1200px;
@@ -160,7 +186,7 @@ footer {
 }
 
 footer h3 {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     margin: 0;
 }
 
@@ -237,7 +263,7 @@ footer li:nth-of-type(3) svg:hover{
     color: var(--white);
     margin: 0 auto;
     max-width: 1200px;
-    padding: 2rem 0;
+    padding: 1rem;
 }
 
 #projects h2 {
@@ -247,21 +273,10 @@ footer li:nth-of-type(3) svg:hover{
 #projects img {
     grid-column: 1/6;
     grid-row: 1/2;
-    width: 500px;
+    width: 100%;
 }
 
-article {
-    display: grid;
-    grid-template-columns: repeat(10,1fr);
-    gap: 1rem;
-    text-align: right;
-}
 
-article div {
-    grid-column: 4/11;
-    grid-row: 1/2;
-    order: 2;
-}
 article h4 {
     font-family: var(--mono);
     font-size: 1rem;
@@ -279,7 +294,6 @@ article p {
     background-color: var(--black);
     padding: 1rem;
     border-radius: 1rem;
-
 }
 
 article p a {
@@ -293,8 +307,7 @@ article ul {
     flex-wrap: row wrap;
     justify-content: left;
     padding: 0;
-    justify-content: right;
-    margin: 0;
+    margin: 0 0 1rem 0;
 }
 
 article ul li {
@@ -307,4 +320,74 @@ article img {
     border: 2px solid var(--white);
     background-color: var(--white);
     border-radius: 20px;
+}
+
+@media(min-width:850px){
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:2rem;
+        padding:0;
+        flex-wrap: nowrap;
+    }
+
+    nav li:first-child {
+        flex-basis: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: flex-start;
+    }
+    
+    #intro{
+        padding: 7rem 0;
+    }
+    
+    #intro p {
+        padding: 0;
+    }
+
+    #intro h2 {
+        padding: 0;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+        gap: 1rem;
+        text-align: right;
+    }
+
+    article p {
+        text-align: left;
+    }
+    
+    article div {
+        grid-column: 4/11;
+        grid-row: 1/2;
+        order: 2;
+    }
+
+    article ul {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: row wrap;
+        padding: 0;
+        justify-content: right;
+        margin: 0;
+    }
+
+    #projects {
+        padding: 32px 0 48px 0;
+    }
+
+    #projects img {
+        width: 500px;
+    }
+
+    footer h3 {
+        font-size: 1.9rem;
+     }
 }
